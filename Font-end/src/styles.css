@@ -1,0 +1,280 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.svg {
+  text-align: center;
+}
+
+mat-grid-tile {
+  background: lightblue;
+  position: 0 !important;
+
+}
+
+.mat-grid-list {
+  position: 0 !important;
+}
+
+.box {
+  padding-left: 40%;
+  color: #4C54F4;
+  cursor: pointer;
+}
+
+input {
+  height: 43px;
+  width: 100%;
+  border: 2px solid #b1b1b1;
+  border-radius: 7px 7px 7px 7px;
+  outline: none;
+}
+
+.eye {
+  background-repeat: no-repeat;
+  background-position: 251px;
+  height: 43px !important;
+  width: 100% !important;
+}
+
+.input_pass:focus {
+  background-repeat: no-repeat;
+  background-position: 251px;
+  border: 2px solid #b1b1b1;
+}
+
+.input_pass {
+  width: 97%;
+  height: 36px;
+}
+
+.uncorrect_email {
+  background-repeat: no-repeat;
+  background-position: 251px;
+  border: 3px solid #FC5A5A;
+
+}
+
+.email_denied {
+  background-repeat: no-repeat;
+  background-position: 251px;
+  border: 3px solid #FCCA00;
+}
+
+.uncorrect {
+  border: 3px solid #FC5A5A;
+}
+
+.denied {
+  border: 3px solid #FCCA00;
+}
+
+.correct {
+  border: 2px solid #b1b1b1;
+}
+
+.input_email[type="text"]:focus {
+  border: 3px solid #249f5d;
+  color: #249f5d;
+  background-repeat: no-repeat;
+  background-position: 251px;
+}
+
+.container-auth {
+  line-height: 36px;
+  position: fixed;
+  display: flex;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+.container-box {
+  background-color: #F9F9F9;
+  width: 290px;
+  margin: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 150px;
+}
+
+.text {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 33px;
+  letter-spacing: -0.05em;
+  text-align: left;
+  color: #101D2D;
+  padding-top: 40px;
+}
+
+.text-p {
+  text-align: left;
+  font-size: 12px;
+}
+
+.r {
+  font-weight: 700;
+}
+
+.l {
+  text-align: right;
+}
+
+.tultype,
+.tultype_denied {
+  width: 320px;
+  height: 70px;
+  margin-top: 10px;
+  background-color: #f7f3f2;
+  opacity: 1;
+  position: relative;
+  border-radius: 7%;
+  border-left: 6px solid #eb6e6e;
+  background-repeat: no-repeat;
+  background-position: 11px 25px;
+  color: #716f7a;
+  cursor: pointer;
+  max-width: 320px;
+  animation-name: box_fail;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+}
+
+.tultype_denied {
+  border-left: 6px solid #FCCA00;
+}
+
+.tultype::before {
+  content: 'Неверный логин либо пароль X ';
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  top: 50%;
+  font-family: sans-serif;
+  left: 1%;
+  transform: translateX(13%) translateY(-50%);
+  font-size: 17px;
+}
+
+@keyframes box_fail {
+  0% {
+    opacity: 0;
+    left: 0px;
+    top: 0px;
+  }
+
+  25% {
+    opacity: 0.5;
+    left: 350px;
+    top: 0px;
+  }
+
+  50% {
+    left: 350px;
+    top: -520px;
+  }
+
+  100% {
+    left: 350px;
+    top: -520px;
+    opacity: 1;
+    overflow: hidden;
+  }
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: #264D73;
+  font-size: 2.5rem;
+}
+
+h2,
+h3 {
+  color: #444;
+  font-weight: lighter;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+body {
+  max-width: 1366px;
+  overflow: hidden;
+  background: #F9F9F9;
+  margin: 0;
+}
+
+body,
+input[text] {
+  color: #333;
+  font-family: Cambria, Georgia, serif;
+}
+
+a {
+  cursor: pointer;
+}
+
+button {
+  background-color: #eee;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: coral;
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: lightblue;
+  color: white;
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #e8e8e8;
+  color: #3d3d3d;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  color: white;
+  background-color: #42545C;
+}
+
+nav a.active {
+  background-color: black;
+  color: white;
+}
+
+hr {
+  margin: 1.5rem 0;
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  width: 100%;
+  padding: .5rem;
+}

@@ -1,0 +1,102 @@
+.container {
+  height: 100vh;
+}
+
+.container_profile {
+  margin: 50px;
+  height: 89%;
+}
+
+.tultype {
+  border-left: 6px solid #249f5d;
+  background-image: url(run_g.svg);
+  animation-name: box_success;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+}
+
+.tultype::before {
+  content: 'Вы вошли в свой аккаунт! X ';
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  top: 50%;
+  font-family: sans-serif;
+  left: 1%;
+  transform: translateX(13%) translateY(-50%);
+  font-size: 17px;
+}
+
+@keyframes box_success {
+  0% {
+    opacity: 0;
+    left: 0px;
+    top: 0px;
+  }
+
+  25% {
+    opacity: 0.7;
+    left: 750px;
+    top: 0px;
+  }
+
+  50% {
+    left: 750px;
+    top: -250px;
+  }
+
+  100% {
+    left: 750px;
+    top: -250px;
+    opacity: 1;
+    overflow: hidden;
+  }
+}
+
+button {
+  background-color: #FCCA00;
+  color: #080707;
+  border-radius: 9px;
+}
+
+.button_message {
+  float: right;
+}
+
+.spacer_logout {
+  position: absolute;
+  position: absolute;
+  bottom: 100px;
+}
+
+.text {
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.r {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.container_message {
+  background: #249f5d;
+  margin-top: 45px;
+  line-height: 53px;
+}
+
+input {
+  font-size: 16px;
+}
+
+.m {
+  line-height: 32px;
+}
+
+.container_user {
+  display: flex;
+}
+
+.user_show {
+  margin: 12px;
+}

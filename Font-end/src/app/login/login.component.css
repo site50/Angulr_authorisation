@@ -1,0 +1,78 @@
+.eye {
+  background-image: url(eye.svg);
+}
+
+.input_pass:focus {
+  background-image: url(cEye.svg);
+}
+
+.uncorrect_email {
+  background-image: url(run.svg);
+}
+
+.input_email[type="text"]:focus {
+  background-image: url(dot.svg);
+}
+
+.tultype {
+  display: block;
+  background-image: url(run.svg);
+  animation-name: box_fail;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+}
+
+.tultype::before,
+.tultype_denied::before {
+  content: 'Неверный логин либо пароль X ';
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  top: 50%;
+  font-family: sans-serif;
+  left: 1%;
+  transform: translateX(13%) translateY(-50%);
+  font-size: 17px;
+}
+
+.tultype_denied::before {
+  content: 'У вас нет прав для доступа к этой странице! X ';
+}
+
+@keyframes box_fail {
+  0% {
+    opacity: 0;
+    left: 0px;
+    top: 0px;
+  }
+
+  25% {
+    opacity: 0.7;
+    left: 350px;
+    top: 0px;
+  }
+
+  50% {
+    left: 350px;
+    top: -520px;
+  }
+
+  100% {
+    left: 350px;
+    top: -520px;
+    opacity: 1;
+    overflow: hidden;
+  }
+}
+
+.tultype_denied {
+  background-image: url(run_y.svg);
+  animation-name: box_fail;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+}
+
+.close_message_error,
+.close_message_denied {
+  display: none;
+}

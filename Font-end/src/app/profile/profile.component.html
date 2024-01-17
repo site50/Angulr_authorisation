@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="container_profile">
+        <div class="container_user">
+
+            <div class="user_show">
+                <img src="{{this.avatar}}" id="img" height="100">
+            </div>
+
+            <div class="user_show">
+                <div class="text r">Имя и фамилия: {{this.name}}</div>
+                <div class="text_p r">ID пользователя: {{this.id}}</div>
+            </div>
+        </div>
+
+        <div class="container_message">
+            <div class="text_p r">Сообщение</div>
+            <input [(ngModel)]="message" name="message" (click)="resetA() " />
+            <button class="button_message" (click)="Add_message(message)">отправить сообщение</button>
+        </div>
+
+        <div *ngFor="let info of this.array_message">
+            <div class="text_p r m"> {{ info }}</div>
+        </div>
+        <div class="spacer_logout">
+            <a class="nav-link" (click)="Logout()" routerLink="/" routerLinkActive="active">Logout</a>
+            <router-outlet></router-outlet>
+        </div>
+        <div>
+            <div [ngClass]="{'tultype':isClickSuccess}" (click)="hideSucces()"></div>
+        </div>
+    </div>
+
+</div>
